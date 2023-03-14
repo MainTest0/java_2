@@ -24,14 +24,14 @@ public class DBHelper {
 	// 싱글톤 패턴
 	// 어디서든 당기더라도 1번 DBHelper만 나타남
 	
-	// 기본 생성자를 만들어서 piprivate으로 설정
+	// 기본 생성자를 만들어서 private으로 설정
 	private DBHelper() {
 		
 	}
 	// 자기 자신을 private으로 선언
 	private static DBHelper dbHelper;
 	
-	public static DBHelper getinstance() {
+	public static DBHelper getInstance() {
 		if(dbHelper == null) {
 			dbHelper = new DBHelper();
 		}
@@ -66,7 +66,7 @@ public class DBHelper {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
-
 }

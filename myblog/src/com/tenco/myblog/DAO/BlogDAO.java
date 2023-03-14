@@ -16,7 +16,7 @@ public class BlogDAO implements IBlogDAO{
 	private ResultSet rs;
 	
 	public BlogDAO() {
-		conn = DBHelper.getinstance().getConnection();
+		conn = DBHelper.getInstance().getConnection();
 	}
 
 	@Override

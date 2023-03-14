@@ -12,13 +12,13 @@ public class MainTest1 {
 //		System.out.println("main에서 주소값 찍음 : " + dbHelper);
 		
 		// 코드 테스트 
-//		BlogController blogController = new BlogController();
-//		BlogDTO responseDTO =  blogController.requestBoardContentById(5);	
-//		System.out.println(responseDTO);
-		
 		BlogController blogController = new BlogController();
-		int result = blogController.requestDeleteBoardById(8, 1);
-		System.out.println(result);
+		BlogDTO responseDTO =  blogController.requestBoardContentById(5);	
+		System.out.println(responseDTO);
+		
+//		BlogController blogController = new BlogController();
+//		int result = blogController.requestDeleteBoardById(8, 1);
+//		System.out.println(result);
 	}
 
 }

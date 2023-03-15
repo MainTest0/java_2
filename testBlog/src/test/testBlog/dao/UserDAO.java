@@ -23,18 +23,14 @@ public class UserDAO implements IUserDAO {
 		conn = dbHelper.getConnection();
 	}
 
-	// 사용자 정보 조회 기능
-	// id 값만 받아서 정보 조회하기
 	@Override
 	public UserDTO select(int id) {
 
 		String query = " SELECT * FROM customer WHERE id = ?";
 		UserDTO dto = null;
 		try {
-			// return을 sql에 나온 표처럼 class로 넘기기
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, id);
-			// 결과값 ResultSet
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {

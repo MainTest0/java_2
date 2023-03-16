@@ -1,6 +1,7 @@
 package ch01;
 
 import java.io.BufferedReader;
+
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
@@ -20,7 +21,7 @@ public class MainTest5 {
 		// addr빼고 company 빼고
 		
 		try {
-			URL url = new URL("https://jsonplaceholder.typicode.com/users/1");
+			URL url = new URL("https://jsonplaceholder.typicode.com/users");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.connect();
@@ -37,9 +38,11 @@ public class MainTest5 {
 			}
 			String str = sb.toString();
 			
-			//ArrayList<User> todoList =  gson.fromJson(str, listType);
+			ArrayList<User> todoLIst = gson.fromJson(str, listType);
 			
-			System.out.println(str);
+			for (User user : todoLIst) {
+				System.out.println(user.toString());
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();

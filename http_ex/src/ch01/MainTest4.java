@@ -23,6 +23,7 @@ public class MainTest4 {
 			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.connect();
+			// 작동 잘되면 200나옴
 			int statusCode = conn.getResponseCode();
 			// 좀더 많은 긴 문자열을 던져주는 녀석의 데이터 받기
 			BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
